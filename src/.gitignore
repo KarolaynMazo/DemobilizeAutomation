@@ -1,0 +1,38 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+bin/
+tmp/
+build/
+
+#Serenity BDD
+target/
+
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+.gradle
+.vscode
+.gradle/build*
+.gradle/vcs*
+/.gradle/
+.build/
+/build
+
