@@ -4,6 +4,8 @@
 
 __Ejemplo: Automatización Web Demoblaze page
 
+Url: https://www.demoblaze.com/index.html
+
 
 # 👓 Informacion del Autor 👓
 |Autor|
@@ -21,9 +23,9 @@ __Ejemplo: Automatización Web Demoblaze page
 
 # 🎨Descripcion de la automatización
 
-_Proyecto de automatizacion web de paginas publicas. 
+_Proyecto de automatización web de páginas públicas. 
 
-Se tiene un configuracion para elegir el navegador a ejecutar entre chrome o edge, para elegir el navegador a usar se envia como varible de entorno. 
+Se tiene un configuración para elegir el navegador a ejecutar entre chrome o edge, para elegir el navegador a usar se envia como varible de entorno. 
 
 comando de ejecución: 
 Edge:
@@ -31,3 +33,5 @@ gradle clean test --tests Demoblaze -Denviroments=edge
 
 Chrome:
 gradle clean test --tests Demoblaze -Denviroments=chrome
+
+La clase runner general es una clase de apoyo para la ejecución con variables de entorno desde vscode. 

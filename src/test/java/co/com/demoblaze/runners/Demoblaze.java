@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         glue = "co.com.demoblaze.stepdefinitions",
         features = "src/test/resources/features/demoblaze.feature",
         snippets = SnippetType.CAMELCASE
-     //   tags = "@Segundo"
+     
 )
 
 public class Demoblaze {
