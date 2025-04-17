@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         glue = "co.com.demoblaze.stepdefinitions",
         features = "src/test/resources/features/demoblaze.feature",
-        snippets = SnippetType.CAMELCASE
+        snippets = SnippetType.CAMELCASE,
+        tags= "@Segundo"
      
 )
 

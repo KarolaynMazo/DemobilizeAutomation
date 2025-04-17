@@ -1,37 +1,35 @@
+# 💡 Projects Name 💡
+
+_Example_: Web Automation Demoblaze 
+
+URL: https://www.demoblaze.com/index.html 
 
 
-# 💡 Nombre del Proyecto 💡
+# 👓 Author Information👓
+|Author|Email|
+|--|--|
+| Karolayn Mazo |Karolaynmazo@gmail.com|
 
-__Ejemplo: Automatización Web Demoblaze page
-
-Url: https://www.demoblaze.com/index.html
-
-
-# 👓 Informacion del Autor 👓
-|Autor|
-|--|
-| Karolayn Mazo |
-
-# 📋 Pre-requisitos 📋
+# 📋 Pre-requirements 📋
 
 - Java 17
 - Lombok
 - VisualStudio Code
-- Gradle, versiones 8
-- Navegadores, edge, chrome
+- Gradle 8
+- browsers, Edge, Chrome
 - Serenity BDD, Screenplay
 
-# 🎨Descripcion de la automatización
+# 🎨Automation Description
 
-_Proyecto de automatización web de páginas públicas. 
+Web automation project.
+There is a setting to select the browser of preference to run the tests, the available options are Chrome or Edge.
+The choice of command is configured as an environment variable.  
 
-Se tiene un configuración para elegir el navegador a ejecutar entre chrome o edge, para elegir el navegador a usar se envia como varible de entorno. 
-
-comando de ejecución: 
+Execution commands: 
 Edge:
 gradle clean test --tests Demoblaze -Denviroments=edge 
 
 Chrome:
 gradle clean test --tests Demoblaze -Denviroments=chrome
 
-La clase runner general es una clase de apoyo para la ejecución con variables de entorno desde vscode. 
+The general runner class is a support class for running with environment variables from vscode. 

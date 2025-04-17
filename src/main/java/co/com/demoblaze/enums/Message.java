@@ -1,11 +1,11 @@
 package co.com.demoblaze.enums;
 
-public enum Mensaje {
-    MSG_ERR_BUSQUEDA("La categoria o el producto en busqueda no son validos");
+public enum Message {
+    MSG_ERR_BUSthatDA("The category or product you are looking for is not valid.");
 
     String mensaje;
 
-    private Mensaje(String mensaje) {
+    private Message(String mensaje) {
         this.mensaje = mensaje;
     }
 

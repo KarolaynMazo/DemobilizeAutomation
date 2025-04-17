@@ -1,6 +1,6 @@
 package co.com.demoblaze.interaction;
 
-import co.com.demoblaze.userinterfaces.Index;
+
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -8,15 +8,15 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import static co.com.demoblaze.utils.Constantes.SESENTA;
+import static co.com.demoblaze.utils.Constants.SESENTA;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isCurrentlyVisible;
 
 
-public class EsperarQue implements Task {
+public class WaitThat implements Task {
     private Target elemento;
 
 
-    public EsperarQue(Target elemento) {
+    public WaitThat(Target elemento) {
         this.elemento = elemento;
     }
 
@@ -27,7 +27,7 @@ public class EsperarQue implements Task {
 
     }
 
-    public static EsperarQue que(Target elemento) {
-        return Tasks.instrumented(EsperarQue.class, elemento);
+    public static WaitThat that(Target elemento) {
+        return Tasks.instrumented(WaitThat.class, elemento);
     }
 }

@@ -6,19 +6,17 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 
-
 @AllArgsConstructor
-public class Esperar implements Task {
-    private int tiempo;
-
+public class Wait implements Task {
+    private int time;
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        new InternalSystemClock().pauseFor(tiempo);
+        new InternalSystemClock().pauseFor(time);
 
     }
 
-    public static Esperar que(int tiempo) {
-        return Tasks.instrumented(Esperar.class, tiempo);
+    public static Wait that(int time) {
+        return Tasks.instrumented(Wait.class, time);
     }
 }

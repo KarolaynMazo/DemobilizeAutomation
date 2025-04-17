@@ -9,10 +9,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @Builder
-public class Informacion {
+public class Information {
 
-    private String categoria;
-    private String producto;
-    private String precio;
-    private String descripcion;
+    private String category;
+    private String Product;
+    private String Price;
+    private String Description;
 }

@@ -1,11 +1,14 @@
 package co.com.demoblaze.stepdefinitions;
 
-import co.com.demoblaze.questions.ValidarLista;
-import co.com.demoblaze.questions.ValidarProducto;
-import co.com.demoblaze.task.SeleccionProducto;
-import co.com.demoblaze.task.SeleccionaCategoria;
-import co.com.demoblaze.utils.Constantes;
+import co.com.demoblaze.questions.ValiteList;
+import co.com.demoblaze.questions.ValidateProduct;
+import co.com.demoblaze.task.SelectProduct;
+import co.com.demoblaze.task.SelectCategory;
+import co.com.demoblaze.utils.Constants;
 import io.cucumber.java.Before;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
@@ -16,7 +19,8 @@ import org.hamcrest.Matchers;
 import java.util.List;
 import java.util.Map;
 
-import static co.com.demoblaze.utils.Constantes.PRODUCTO;
+import static co.com.demoblaze.utils.Constants.PRODUCT;
+
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 
@@ -27,32 +31,30 @@ public class DemoblazeStepDefinitions {
         setTheStage(new OnlineCast());
     }
 
-    @Dado("que {string} desea navegar a la pagina Demoblaze")
-    public void queClienteDeseaNavegarALaPaginaDemoblaze(String cliente) {
-        theActor(cliente).wasAbleTo(Open.url(Constantes.URL));
+    @Given("that {string} wants to navigate to the page Demoblaze")
+    public void thatWantsToNavigateToThePageDemoblaze(String customer) {
+        theActor(customer).wasAbleTo(Open.url(Constants.URL));
     }
 
-    @Cuando("el hace la seleccion de la {string}")
-    public void elHaceLaSeleccionDeLaLaptos(String categoria) {
-        theActorInTheSpotlight().attemptsTo(SeleccionaCategoria.laCategoria(categoria));
+    @When("customer makes the selection of {string}")
+    public void customerMakesTheSelectionOf(String category) {
+        theActorInTheSpotlight().attemptsTo(SelectCategory.category(category));
     }
 
-    @Entonces("deberia ver una lista de productos")
-    public void deberiaVerUnaListaDeProductos() {
-        theActorInTheSpotlight().should(seeThat(ValidarLista.con(PRODUCTO), Matchers.is(PRODUCTO)));
+    @Then("should see a list of products")
+    public void shouldSeeAListOfProducts() {
+        theActorInTheSpotlight().should(seeThat(ValiteList.con(PRODUCT), Matchers.is(PRODUCT)));
     }
 
-
-    @Cuando("seleccionar la Categoria y selecciona un Producto")
-    public void seleccionarLaCategoriaYSeleccionaUnProducto(List<Map<String, String>> data) {
-        theActorInTheSpotlight().attemptsTo(SeleccionProducto.el(data.get(0)));
+    @When("select the Category and select a Product")
+    public void selectTheCategoryAndSelectAProduct(List<Map<String, String>> data) {
+        theActorInTheSpotlight().attemptsTo(SelectProduct.el(data.get(0)));
 
     }
 
-    @Entonces("verifico nombre del")
-    public void verificoNombreDel(List<Map<String, String>> data) {
-        theActorInTheSpotlight().should(String.valueOf(seeThat(ValidarProducto.con(data.get(0))).equals(data.get(0))));
+    @Then("I verify the name of the")
+    public void iVerifyTheNameOfThe(List<Map<String, String>> data) {
+        theActorInTheSpotlight().should(String.valueOf(seeThat(ValidateProduct.con(data.get(0))).equals(data.get(0))));
     }
-
 
 }
